@@ -34,6 +34,7 @@ Last update :
 1. Global css start
 =======================================*/
 /*google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
 /* css variables */
 :root {
   /*color variables*/
@@ -46,6 +47,11 @@ Last update :
   --f-tertiary: "Quicksand", sans-serif;
 }
 
+@font-face {
+  font-family: "Work Sans";
+  src: url(./fonts/Raleway-Bold.ttf) format("truetype");
+  font-weight: 900;
+}
 @font-face {
   font-family: "Mulish";
   src: url(./fonts/Mulish-Bold.ttf) format("trueType");
