@@ -1,24 +1,38 @@
 import Link from "next/link";
 import React from "react";
 
-function Breadcrumb({ pageName, pageTitle }) {
+function Breadcrumb({ title, pageName, pageList }) {
   return (
-    <div className="breadcrumb breadcrumb-style-one mb-0 ">
-      <div className="container">
-        <div className="col-lg-12 text-center">
-          <h1 className="breadcrumb-title">{pageTitle}</h1>
-          <ul className="d-flex justify-content-center breadcrumb-items">
-            <li className="breadcrumb-item">
-              <i className="bi bi-house-door" />{" "}
-              <Link legacyBehavior href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li className="breadcrumb-item active">{pageName}</li>
-          </ul>
+    <section className="breadcrumbs">
+      <div className="breadcrumb-sm-images">
+        <div className="inner-banner-1 magnetic-item">
+          <img src="assets/img/inner-pages/inner-banner-1.png" alt="" />
+        </div>
+        <div className="inner-banner-2 magnetic-item">
+          <img src="assets/img/inner-pages/inner-banner-2.png" alt="" />
         </div>
       </div>
-    </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="breadcrumb-wrapper">
+              <div className="breadcrumb-cnt">
+                <span>{pageName}</span>
+                <h1>"{title}"</h1>
+                <div className="breadcrumb-list">
+                  <Link legacyBehavior href="/"><a>Home</a></Link>
+                  <img
+                    src="assets/img/inner-pages/breadcrumb-arrow.svg"
+                    alt=""
+                  />
+                  {pageList}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

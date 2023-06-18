@@ -1,5 +1,5 @@
 {
-  "name": "bidgen-next",
+  "name": "softconic-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.4",
-    "isomorphic-unfetch": "^4.0.2",
-    "next": "13.3.4",
+    "bootstrap": "^5.3.0",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-fast-marquee": "^1.6.0",
     "react-modal-video": "^2.0.0",
     "swiper": "^9.2.4"
   }

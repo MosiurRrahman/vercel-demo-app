@@ -1,106 +1,332 @@
-import Layout from '@/components/Layout/Layout'
 import Breadcrumb from '@/components/common/Breadcrumb'
+import Layout from '@/components/layout/Layout'
 import React from 'react'
 
-function Faq() {
+function Faqpage() {
   return (
     <Layout>
-        <Breadcrumb pageName="FAQ" />
-        <section className="faq-section pt-110">
+      <Breadcrumb pageList="FAQs" title="Frequently Asked Questions?" pageName="FAQS" />
+      <div className="faq-page sec-mar">
   <div className="container">
-    <div className="row gy-5">
-      <div className="col-lg-4 order-lg-1 order-2">
-        <div className="faq-left-area">
-          <div className="article">
-            <div className="article-header">
-              <h5>Most Popular Articles</h5>
-            </div>
-            <ul className="article-body">
-              <li>
-                <h6>01. Tips For Winning</h6>
-                <p>“Lorem ipsum dolor sit amet, consectetur adi scing elit, sed do eiusmod tempor incididunt   ut labore et dolore</p>
-              </li>
-              <li>
-                <h6>02. How to Win Bid</h6>
-                <p>“Lorem ipsum dolor sit amet, consectetur adi scing elit, sed do eiusmod tempor incididunt   ut labore et dolore</p>
-              </li>
-            </ul>
+    <div className="row gy-5 justify-content-lg-between justify-content-center">
+      <div className="col-lg-4">
+        <div className="faq-items">
+          <ul className="nav nav-tabs" id="myTab" role="tablist">
+            <li className="nav-item" role="presentation">
+              <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Progress</button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Payment</button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Support</button>
+            </li>
+          </ul>
+        </div>
+        <div className="contact-form-wrap">
+          <div className="form-tltle">
+            <h5>HAVE QUESTION?</h5>
           </div>
-          <div className="qsn-area">
-            <h5>HAVE ANY QUESTIONS?</h5>
-            <form className="qsn-form">
-              <div className="form-inner">
-                <label>Your Name</label>
-                <input type="text" name="name" placeholder="Type your name " />
+          <div className="contact-form">
+            <form>
+              <div className="row">
+                <div className="col-md-12 mb-20">
+                  <div className="form-inner">
+                    <label>name</label>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div className="col-lg-12 mb-20">
+                  <div className="form-inner">
+                    <label>Email</label>
+                    <input type="email" />
+                  </div>
+                </div>
+                <div className="col-lg-12 mb-20">
+                  <div className="form-inner">
+                    <label>Phone</label>
+                    <input type="email" />
+                  </div>
+                </div>
+                <div className="col-lg-12 mb-20">
+                  <div className="form-inner">
+                    <label>Message</label>
+                    <textarea defaultValue={""} />
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                  <div className="form-inner">
+                    <button className="primary-btn3" type="submit">Submit</button>
+                  </div>
+                </div>
               </div>
-              <div className="form-inner">
-                <textarea name="message" rows={5} placeholder="Type your question" defaultValue={""} />
-              </div>
-              <button className="qsn-send-btn">Submit Now</button>
             </form>
           </div>
         </div>
       </div>
-      <div className="col-lg-8 order-lg-2 order-1">
-        {/* faq */}
-        <div className="faq-wrap">
-          <div className="faq-item">
-            <h5 className="accordion-button" id="heading01" data-bs-toggle="collapse" data-bs-target="#collapse01" aria-controls="collapse01">
-              <span className="faq-serial">01</span> Posuere vestibulum duis aliquam magnis laoreet?
-            </h5>
-            <div id="collapse01" className="accordion-collapse collapse show">
-              <div className="faq-body">
-                You configure credit limits when you create packages in Offer Design. When a customer purchases a package, the credit limits defined in the package apply to the customer's services. See Creating packages customer purchases.
+      <div className="col-lg-8">
+        <div className="tab-content" id="myTabContent">
+          <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div className="accordion" id="accordionExample1">
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingOne">
+                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Aliquam ligula nunc, vehicula at est quis.
+                  </button>
+                </h5>
+                <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingTwo">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    In hac habitasse platea dictumst Cras leo.
+                  </button>
+                </h5>
+                <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingThree">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ornare iaculis tellus. Phasellus venenatis.
+                  </button>
+                </h5>
+                <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingFour">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingFive">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingSix">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="faq-item">
-            <h5 id="heading02" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse02" aria-controls="collapse02">
-              <span className="faq-serial">02</span> We help to create visual strategies?
-            </h5>
-            <div id="collapse02" className="accordion-collapse collapse">
-              <div className="faq-body">
-                Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, libero ex hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit amet condimentum erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper.
+          <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div className="accordion" id="accordionExample2">
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingOne1">
+                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                    Aliquam ligula nunc, vehicula at est quis.
+                  </button>
+                </h5>
+                <div id="collapseOne1" className="accordion-collapse collapse show" aria-labelledby="headingOne1" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingTwo1">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                    In hac habitasse platea dictumst Cras leo.
+                  </button>
+                </h5>
+                <div id="collapseTwo1" className="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingThree1">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                    ornare iaculis tellus. Phasellus venenatis.
+                  </button>
+                </h5>
+                <div id="collapseThree1" className="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingFour1">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseFour1" className="accordion-collapse collapse" aria-labelledby="headingFour1" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingFive1">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive1" aria-expanded="false" aria-controls="collapseFive1">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseFive1" className="accordion-collapse collapse" aria-labelledby="headingFive1" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingSix1">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix1" aria-expanded="false" aria-controls="collapseSix1">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseSix1" className="accordion-collapse collapse" aria-labelledby="headingSix1" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="faq-item">
-            <h5 id="heading03" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse03" aria-controls="collapse03">
-              <span className="faq-serial">03</span> Questionnaire on online shopping behavior during COVID-19
-            </h5>
-            <div id="collapse03" className="accordion-collapse collapse">
-              <div className="faq-body">
-                Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, libero ex hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit amet condimentum erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper.
+          <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div className="accordion" id="accordionExample3">
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingOne2">
+                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                    Aliquam ligula nunc, vehicula at est quis.
+                  </button>
+                </h5>
+                <div id="collapseOne2" className="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="faq-item">
-            <h5 id="heading04" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse04" aria-controls="collapse04">
-              <span className="faq-serial">04</span> How do I know if I'm the high bidder?
-            </h5>
-            <div id="collapse04" className="accordion-collapse collapse">
-              <div className="faq-body">
-                Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, libero ex hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit amet condimentum erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper.
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingTwo2">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                    In hac habitasse platea dictumst Cras leo.
+                  </button>
+                </h5>
+                <div id="collapseTwo2" className="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="faq-item">
-            <h5 id="heading05" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse05" aria-controls="collapse05">
-              <span className="faq-serial">05</span> How will I know if my bid was successful?
-            </h5>
-            <div id="collapse05" className="accordion-collapse collapse">
-              <div className="faq-body">
-                Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, libero ex hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit amet condimentum erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper.
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingThree2">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                    ornare iaculis tellus. Phasellus venenatis.
+                  </button>
+                </h5>
+                <div id="collapseThree2" className="accordion-collapse collapse" aria-labelledby="headingThree2" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="faq-item">
-            <h5 id="heading06" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse06" aria-controls="collapse06">
-              <span className="faq-serial">06</span> What happens if I bid on the wrong lot?
-            </h5>
-            <div id="collapse06" className="accordion-collapse collapse">
-              <div className="faq-body">
-                Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, libero ex hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit amet condimentum erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper.
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingFour2">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseFour2" className="accordion-collapse collapse" aria-labelledby="headingFour2" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingFive2">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive2" aria-expanded="false" aria-controls="collapseFive2">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseFive2" className="accordion-collapse collapse" aria-labelledby="headingFive2" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h5 className="accordion-header" id="headingSix2">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix2" aria-expanded="false" aria-controls="collapseSix2">
+                    Phasellus a placerat eros In hac habitasse.
+                  </button>
+                </h5>
+                <div id="collapseSix2" className="accordion-collapse collapse" aria-labelledby="headingSix2" data-bs-parent="#accordionExample">
+                  <div className="accordion-body">
+                    Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos 
+                    himenaeos. Praesent nec neque at dolor venenatis consectetur eu quis ex. 
+                    placerat felis non aliquam.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -108,10 +334,10 @@ function Faq() {
       </div>
     </div>
   </div>
-</section>
+</div>
 
     </Layout>
   )
 }
 
-export default Faq
+export default Faqpage

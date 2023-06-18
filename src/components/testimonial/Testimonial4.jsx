@@ -1,171 +1,173 @@
-import React, { useMemo } from "react";
-import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Link from "next/link";
-SwiperCore.use([Navigation, Autoplay, EffectFade]);
-
+import React from 'react'
 
 function Testimonial4() {
-    const slider = useMemo(()=>{
-        return{
-            slidesPerView: 1,
-    speed: 1000,
-    spaceBetween: 24,
-    loop: true,
-    roundLengths: true,
-    autoplay: {
-      delay: 9000
-    },
-    navigation: {
-      nextEl: '.testi-next4',
-      prevEl: '.testi-prev4',
-    }
-        }
-    },[])
   return (
-    <div className="testimonial-style-four mt-110">
-  <div className="container">
-    <div className="row align-items-center">
-      <div className="col-lg-5">
-        <div className="testimonial-disc">
-          <strong>Testimonial</strong>
-          <h2>What They Are Says Our Services.</h2>
-          <p>Integer ante tellus, bibendum eget ante ut, aliquet luctus quam.
-            mattis mauris. Vestibulum ante ipsum primis in faucibus orcina
-            ante tellus, bibendum eget ante ut, aliquet luctus quam.Integer
-            bibendum eget ante ut, aliquet luctus quam. Integer egeteft.</p>
+    <div className="home4-testimonial-section  sec-mar">
+    <div className="container">
+      <div className="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+        <div className="col-lg-12">
+          <div className="section-title-4 text-center two">
+            <span>Client Experiences</span>
+            <h2>Appreciations From Our <span>Satisfied</span> Customers.</h2>
+          </div>
         </div>
       </div>
-      <div className="col-lg-7 mt-5 mt-lg-0">
-        <Swiper {...slider} className="swiper testimonial-slider-four">
-          <div className="swiper-wrapper">
-            <SwiperSlide className="swiper-slide">
-              <div className="testimonial-land-alpha">
-                <div className="testi-reviewer mx-auto">
-                  <img src="assets/images/testimonial/reviewer-4a.png" alt="" />
+      <div className="row g-4">
+        <div className="col-lg-7 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <div className="testimonial-card4">
+            <div className="quate-icon">
+              <img src="assets/img/home-4/left-quote.svg" alt="" />
+            </div>
+            <div className="testimonial-top">
+              <div className="author-area">
+                <div className="author-img">
+                  <img src="assets/img/home-4/h4-testi-01.png" alt="" />
                 </div>
-                <div className="testi-body">
-                  <p className="testi-texts">Integer ante tellus, bibendum eget ante ut, aliquet
-                    luctus quam. Integer egeteft
-                    mattis mauris. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et.Integer on
-                    ante tellus, bibendum eget ante ut, aliquet luctus quam.Integer ante tellus,
-                    thise
-                    bibendum eget ante ut, aliquet luctus quam. Integer egeteft.</p>
-                  <div className="testi-footer">
-                    <div className="reviewer">
-                      <h5><Link legacyBehavior href="/winner"><a>Robert Fox</a></Link></h5>
-                      <span>Co-Founder</span>
-                    </div>
-                    <ul className="testi-rating d-flex gap-2">
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                    </ul>
-                  </div>
+                <div className="author-content">
+                  <h4>Mateo Daniel</h4>
+                  <span>CEO At atlantis.com</span>
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="testimonial-land-alpha">
-                <div className="testi-reviewer mx-auto">
-                  <img src="assets/images/testimonial/reviewer-4b.png" alt="" />
-                </div>
-                <div className="testi-body">
-                  <p className="testi-texts">Integer ante tellus, bibendum eget ante ut, aliquet
-                    luctus quam. Integer egeteft
-                    mattis mauris. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et.Integer on
-                    ante tellus, bibendum eget ante ut, aliquet luctus quam.Integer ante tellus,
-                    thise
-                    bibendum eget ante ut, aliquet luctus quam. Integer egeteft.</p>
-                  <div className="testi-footer">
-                    <div className="reviewer">
-                      <h5><Link legacyBehavior href="/winner"><a>Mokarram Hossain</a></Link></h5>
-                      <span>Manager</span>
-                    </div>
-                    <ul className="testi-rating d-flex gap-2">
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                    </ul>
-                  </div>
-                </div>
+              <div className="review-date-and-time">
+                <p>May 9, 2023</p> 
+                <span>10.30 PM</span>
               </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="testimonial-land-alpha">
-                <div className="testi-reviewer mx-auto">
-                  <img src="assets/images/testimonial/reviewer-4c.png" alt="" />
-                </div>
-                <div className="testi-body">
-                  <p className="testi-texts">Integer ante tellus, bibendum eget ante ut, aliquet
-                    luctus quam. Integer egeteft
-                    mattis mauris. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et.Integer on
-                    ante tellus, bibendum eget ante ut, aliquet luctus quam.Integer ante tellus,
-                    thise
-                    bibendum eget ante ut, aliquet luctus quam. Integer egeteft.</p>
-                  <div className="testi-footer">
-                    <div className="reviewer">
-                      <h5><Link legacyBehavior href="/winner"><a>Raufur Rahman</a></Link></h5>
-                      <span>Area Manager</span>
-                    </div>
-                    <ul className="testi-rating d-flex gap-2">
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                    </ul>
-                  </div>
-                </div>
+            </div>
+            <div className="testimonial-content">
+              <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
+                himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
+                Donec lacinia placerat felis non aliquam.”</p>
+            </div>
+            <div className="testimonial-btm">
+              <div className="review-left">
+                <img src="assets/img/home-4/trustpilot.svg" alt="" />
               </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="testimonial-land-alpha">
-                <div className="testi-reviewer mx-auto">
-                  <img src="assets/images/testimonial/reviewer-4d.png" alt="" />
-                </div>
-                <div className="testi-body">
-                  <p className="testi-texts">Integer ante tellus, bibendum eget ante ut, aliquet
-                    luctus quam. Integer egeteft
-                    mattis mauris. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et.Integer on
-                    ante tellus, bibendum eget ante ut, aliquet luctus quam.Integer ante tellus,
-                    thise
-                    bibendum eget ante ut, aliquet luctus quam. Integer egeteft.</p>
-                  <div className="testi-footer">
-                    <div className="reviewer">
-                      <h5><Link legacyBehavior href="/winner"><a>Galib Al Nahian</a></Link></h5>
-                      <span>Founder</span>
-                    </div>
-                    <ul className="testi-rating d-flex gap-2">
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                      <li><i className="bi bi-star-fill" /></li>
-                    </ul>
-                  </div>
-                </div>
+              <div className="review-right">
+                <img src="assets/img/home-4/trastpilot-star.svg" alt="" />
               </div>
-            </SwiperSlide>
+            </div>
           </div>
-        </Swiper>
-        <div className="slider-arrows text-center d-lg-flex d-none  justify-content-between mt-4">
-          <div className="testi-prev4 swiper-prev-arrow" tabIndex={0}> <img src="assets/images/icon/flat-prev-icon.svg" alt="" /> </div>
-          <div className="testi-next4 swiper-next-arrow" tabIndex={0}> <img src="assets/images/icon/flat-next-icon.svg" alt="" /></div>
+        </div>
+        <div className="col-lg-5 mt-35 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+          <div className="testimonial-card4">
+            <div className="quate-icon">
+              <img src="assets/img/home-4/left-quote.svg" alt="" />
+            </div>
+            <div className="testimonial-top">
+              <div className="author-area">
+                <div className="author-img">
+                  <img src="assets/img/home-4/h4-testi-02.png" alt="" />
+                </div>
+                <div className="author-content">
+                  <h4>Luke Julian</h4>
+                  <span>CEO At astra.com</span>
+                </div>
+              </div>
+              <div className="review-date-and-time">
+                <p>May 9, 2023</p> 
+                <span>10.30 PM</span>
+              </div>
+            </div>
+            <div className="testimonial-content">
+              <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
+                himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
+                Donec lacinia placerat felis non aliquam.”</p>
+            </div>
+            <div className="testimonial-btm">
+              <div className="review-left">
+                <img src="assets/img/home-4/google.svg" alt="" />
+              </div>
+              <div className="review-right">
+                <ul className="star">
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-5 mt--35 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <div className="testimonial-card4">
+            <div className="quate-icon">
+              <img src="assets/img/home-4/left-quote.svg" alt="" />
+            </div>
+            <div className="testimonial-top">
+              <div className="author-area">
+                <div className="author-img">
+                  <img src="assets/img/home-4/h4-testi-03.png" alt="" />
+                </div>
+                <div className="author-content">
+                  <h4>Elias Josiah</h4>
+                  <span>CEO At gremio.com</span>
+                </div>
+              </div>
+              <div className="review-date-and-time">
+                <p>May 9, 2023</p> 
+                <span>10.30 PM</span>
+              </div>
+            </div>
+            <div className="testimonial-content">
+              <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
+                himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
+                Donec lacinia placerat felis non aliquam.”</p>
+            </div>
+            <div className="testimonial-btm">
+              <div className="review-left">
+                <img src="assets/img/home-4/google.svg" alt="" />
+              </div>
+              <div className="review-right">
+                <ul className="star">
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                  <li><i className="bi bi-star-fill" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-7 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+          <div className="testimonial-card4">
+            <div className="quate-icon">
+              <img src="assets/img/home-4/left-quote.svg" alt="" />
+            </div>
+            <div className="testimonial-top">
+              <div className="author-area">
+                <div className="author-img">
+                  <img src="assets/img/home-4/h4-testi-04.png" alt="" />
+                </div>
+                <div className="author-content">
+                  <h4>Colton Roman</h4>
+                  <span>CEO At powogaz.com</span>
+                </div>
+              </div>
+              <div className="review-date-and-time">
+                <p>May 9, 2023</p> 
+                <span>10.30 PM</span>
+              </div>
+            </div>
+            <div className="testimonial-content">
+              <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
+                himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
+                Donec lacinia placerat felis non aliquam.”</p>
+            </div>
+            <div className="testimonial-btm">
+              <div className="review-left">
+                <img src="assets/img/home-4/trustpilot.svg" alt="" />
+              </div>
+              <div className="review-right">
+                <img src="assets/img/home-4/trastpilot-star.svg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
   )
 }
 
